@@ -30,7 +30,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY') #'django-insecure-zx%652436^=m+jgqwq&nx^2f&qmpkv)le-53_pft1ryfz8qygm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG')
+DEBUG = True
 
 ALLOWED_HOSTS = ['gamepanda-68fb779724ae.herokuapp.com',
                  '127.0.0.1',

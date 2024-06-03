@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 from pathlib import Path
 import environ
-#import django_heroku
+import django_heroku
 
 env = environ.Env()
 environ.Env.read_env()
@@ -183,5 +183,5 @@ AWS_DEFAULT_ACL = None
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
 
-#django_heroku.settings(locals())
+django_heroku.settings(locals())
 

@@ -1,0 +1,16 @@
+{% extends "game_page/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<h2>{{ game.name }}</h2>
+<p>{{ game.description }}</p>
+<div id="game-container" game-url="{{ game.unzipped_location }}" style="width: 800px; height: 600px;"></div>
+<p>Game File Path: {{ game.unzipped_location }}</p>
+{% if game.unzipped_location %}
+<script src="{% static 'game_page/js/loader.js' %}"></script>
+{% else %}
+    <p>No game file uploaded.</p>
+{% endif %}
+
+<a href="{% url 'delete-game' game.id %}">Delete this game</a>
+{% endblock %}
